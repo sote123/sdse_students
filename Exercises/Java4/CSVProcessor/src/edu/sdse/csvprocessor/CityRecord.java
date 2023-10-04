@@ -12,12 +12,28 @@ public class CityRecord {
         this.city = city;
         this.population = population;
     }
-    
+
+    // Getter methods for each field 
+    public int getId() {
+        return id;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+
     @Override
     public String toString() {
-        return String.format("id: %d, year: %d, city: %s, population: %d", id, year, city, population);
+        return "id: " + id + ", year: " + year + ", city: " + city + ", population: " + population;
     }
 }
-
 
 

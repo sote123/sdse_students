@@ -51,19 +51,16 @@ public class CityCSVProcessor {
                 }
 
                 int averagePopulation = totalPopulation / totalEntries;
-                System.out.println("Average population of " + city + " (" + minYear + "-" + maxYear + "; " +
-                        totalEntries + " entries): " + averagePopulation);}
+				String formattedString = String.format("%s (%d-%d; %d entries): %d", city, minYear, maxYear, totalEntries, averagePopulation);
+				System.out.println(formattedString);
+			}
 			
 		} catch (Exception e) {
 			System.err.println("An error occurred:");
 			e.printStackTrace();
 		}
 	}
-	
-	
 
-	
-	
 	
 	private String cleanRawValue(String rawValue) {
 		return rawValue.trim();
